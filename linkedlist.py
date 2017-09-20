@@ -33,16 +33,16 @@ class LinkedList:
             return False
 
 
-n1 = Node(3)
-n2 = Node(5)
-n3 = Node(9)
-
-l1 = LinkedList()
-
-l2 = LinkedList(n1)
-l2.add_to_head(n2)
-l2.add_to_head(n3)
-l2.print()
-
-print(l2.is_empty())
-print(l1.is_empty())
+# n1 = Node(3)
+# n2 = Node(5)
+# n3 = Node(9)
+#
+# l1 = LinkedList()
+#
+# l2 = LinkedList(n1)
+# l2.add_to_head(n2)
+# l2.add_to_head(n3)
+# l2.print()
+#
+# print(l2.is_empty())
+# print(l1.is_empty())
