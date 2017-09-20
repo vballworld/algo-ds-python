@@ -8,29 +8,26 @@ class LinkedList:
     def __init__(self, node=None):
         self.head = node
 
-
     def add_to_head(self, node):
-        if self.head == None:
+        if self.head is None:
             self.head = node
         else:
             node.next = self.head
             self.head = node
 
-
     def print(self):
         node = self.head
 
-        if node == None:
+        if node is None:
             print("list is empty.")
 
-        while node != None:
+        while node is not None:
             print("{0}->".format(node.val), end="")
             node = node.next
         print("None")
 
-
     def is_empty(self):
-        if self.head == None:
+        if self.head is None:
             return True
         else:
             return False
