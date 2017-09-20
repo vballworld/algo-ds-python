@@ -11,24 +11,24 @@ class Stack:
         self.size = 0
 
     def push(self, val):
-        if self.top is None:
-            self.top = Node(val)
-        else:
+        if self.top is not None:
             n = Node(val)
             n.next = self.top
             self.top = n
+        else:
+            self.top = Node(val)
 
         self.size += 1
 
     def pop(self):
-        if self.top is None:
-            print("stack is empty.")
-            return None
-        else:
+        if self.top is not None:
             prev_top = self.top
             self.top = prev_top.next
             self.size -= 1
             return prev_top.val
+        else:
+            print("stack is empty.")
+            return None
 
     def print(self):
         n = self.top
@@ -37,14 +37,23 @@ class Stack:
             n = n.next
         print("None")
 
+    def get_size(self):
+        return self.size
 
-# s1 = Stack()
-# s1.print()
-# 
-# s1.push(5)
-# s1.push(8)
-# s1.push(2)
-# s1.print()
-# 
-# print(s1.pop())
-# s1.print()
+    def get_top(self):
+        if self.top is not None:
+            return self.top.val
+        else:
+            print("stack is empty.")
+            return None
+
+
+s1 = Stack()
+s1.print()
+s1.push(5)
+s1.push(8)
+s1.push(2)
+s1.print()
+print(s1.get_size())
+print(s1.pop())
+print(s1.get_top())
